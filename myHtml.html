@@ -3,34 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Telegram</title>
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
     <div class="container-fluid" id="main">
 
-        <div class="navbar nav" >
+        <div class="navbar navbar-static-top ">
             <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" id="topMenu">
-                <span class="glyphicon glyphicon-menu-hamburger"></span>
-                <h4 id="telegram">Telegram</h4>
+                <img src="img/General_2x.png" id="telegramLogo"></img>
+                <span id="telegram">Telegram</span>
+                <div class="menuWrapper" id="menuButton">
+                    <span class="dropdown-toggle navbar-toggle menuIcon">
+                        <div class="menuLine"></div>
+                        <div class="menuLine"></div>
+                        <div class="menuLine"></div>
+                    </span>
+                </div>
+                <div class="menuWrapper" id="searchButton">
+                    <span class="glyphicon glyphicon-search"></span>
+                </div>
             </div>
         </div>
         <div class="container-fluid" id="listView">
             <div class="col-sm-12" id="sideBar">
-                <ul>
+                <input type="search" placeholder="Search" id="searchBar" autofocus="true">
+                <ul id="chatLists">
+                    <li class="row">
+                        <div class="col-sm-11 col-xs-11" id="picAndName">
+                            <span>
+                                <img src="img/mohammad.jpg" class="profPic" id="image1" width="40px" height="40px"/>
+                            </span>
+                            <span class="chatName">Mohammad</span>
+                            <span class="chatSum" style="display: block;">love you :P</span>
+                        </div>
+                        <div class="col-sm-1 col-xs-1">
+                            <h6 class="time">5:20</h6>
+                            <!--<div class="notifCircle">5</div>-->
+                        </div>
+                    </li>
+
+                    <li class="row">
+                        <div class="col-sm-11 col-xs-11" id="picAndName">
+                            <span>
+                                <img src="img/uncox.jpg" class="profPic" id="image1" width="40px" height="40px"/>
+                            </span>
+                            <span class="chatName">uncox</span>
+                            <span class="chatSum" style="display: block;">Photo</span>
+                        </div>
+                        <div class="col-sm-1 col-xs-1">
+                            <h6 class="time">12:40</h6>
+                            <br>
+                            <div class="notifCircle">2</div>
+                        </div>
+                    </li>
+
                     <li class="row">
                         <div class="col-sm-11 col-xs-11" id="picAndName" height= "50px";>
                             <span>
                                 <img src="img/twitter.jpg" class="profPic" id="image1" width="40px" height="40px"/>
                             </span>
-                            <span class="chatName">mamlekate</span>
-                            <span class="chatSum" style="display: block;">akjshf tu in mamlekat</span>
+                            <span class="chatName">توییتر فارسی</span>
+                            <span class="chatSum" style="display: block;">gooz tu in mamlekat</span>
                         </div>
                         <div class="col-sm-1 col-xs-1">
                             <h6 class="time">8:43</h6>
+                            <br>
                             <div class="notifCircle">12</div>
                         </div>
                     </li>
+
                     <li class="row">
                         <div class="col-sm-11 col-xs-11" id="picAndName">
                             <span>
@@ -40,13 +83,44 @@
                             <span class="chatSum" style="display: block;">salam che khabar? khubi?</span>
                         </div>
                         <div class="col-sm-1 col-xs-1">
-                            <h6 class="time">5:20</h6>
-                            <div class="notifCircle">5</div>
+                            <h6 class="time">6:12</h6>
+                            <br>
+                            <div class="notifCircle">46</div>
                         </div>
                     </li>
+
+                    <li class="row">
+                        <div class="col-sm-11 col-xs-11" id="picAndName">
+                            <span>
+                                <img src="img/wallpapers.jpg" class="profPic" id="image1" width="40px" height="40px"/>
+                            </span>
+                            <span class="chatName">Wallpapers</span>
+                            <span class="chatSum" style="display: block;">Photo</span>
+                        </div>
+                        <div class="col-sm-1 col-xs-1">
+                            <h6 class="time">7:45</h6>
+                            <!--<div class="notifCircle">5</div>-->
+                        </div>
+                    </li>
+
+                    <li class="row">
+                        <div class="col-sm-11 col-xs-11" id="picAndName">
+                            <span>
+                                <img src="img/nazi.jpg" class="profPic" id="image1" width="40px" height="40px"/>
+                            </span>
+                            <span class="chatName">Naziii</span>
+                            <span class="chatSum" style="display: block;">bia ino bebin khoshal sho</span>
+                        </div>
+                        <div class="col-sm-1 col-xs-1">
+                            <h6 class="time">1:20</h6>
+                            <!--<div class="notifCircle">5</div>-->
+                        </div>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </div>
 </body>
+<script src="myJS.js"></script>
 </html>

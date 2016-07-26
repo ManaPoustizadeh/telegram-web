@@ -1,5 +1,6 @@
 html, body{
     font-family: "Segoe UI",Arial,sans-serif;
+    overflow-x: hidden;
 }
 
 .container-fluid{
@@ -17,36 +18,101 @@ html, body{
 .navbar , .nav{
     margin-bottom: 0px;
     border: none;
+    background-color: #5681a2;
+    min-height:44px;
+    min-width:100%;
+    position: fixed;
 }
 
 #topMenu{
-    background-color: #5681a2;
     height:44px;
     color: white;
     align-content:center;
-    /*position: fixed;*/
+    padding-right: 0;
+}
+
+#telegramLogo{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 10px;
 }
 
 #telegram{
     display: inline;
-    margin-left: 25px;
+    margin-left: 15px;
+    font-size: 20px;
     position: relative;
-    top: -3px;
+    top: 7px;
 }
 
 .glyphicon{
     color: white;
     font-size: 20px;
-    margin-top: 10px;
+    margin-left: 21px;
+    margin-right: 21px;
+    margin-top: 12px;
 }
+
+.menuWrapper{
+    min-height: 100%;
+    width: 63px;
+    float: right;
+}
+
+.menuIcon{
+    /*background-color: #fefeff;*/
+    padding: 0px;
+    width: 21px;
+    height: 21px;
+    border-radius: 1px;
+    /*position: absolute;*/
+    margin-left: 21px;
+    margin-right: 21px;
+}
+
+.menuLine{
+    background-color: #fefeff;
+    width: 21px;
+    height: 2px;
+    border-radius: 1px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    /*float: right;*/
+}
+
+#searchBar{
+    border: solid 1px #dbdbdb;
+    background: url("img/IconsetW_2x.png") no-repeat;
+    background-size: 15px 15px;
+    background-position-x: 5px;
+    background-position-y: 50%;
+    min-width: 100%;
+    padding: 5px 5px 5px 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    outline: none;
+    border-radius: 3px;
+    display: none;
+
+}
+
+/*#searchBar ::-webkit-input-placeholder{*/
+    /*left: 21px;*/
+/*}*/
 
 ul{
     list-style-type: none;
     padding-left: 0px;
 }
+#chatLists li:hover{
+    background-color: #f2f2f2;
+}
 
 #listView{
     position: absolute;
+    top: 44px;
 }
 
 .profPic{
@@ -76,18 +142,21 @@ ul{
 .time{
     color: #b2b2b2;
     margin-top: 5px;
+    float: right;
 }
 
 .notifCircle{
     border-radius: 50%;
     margin-top: 5px;
+    padding-top: 2px;
     background-color: #bebebe;
     width: 17px;
     height: 17px;
     color: white;
     font-size: 10px;
     text-align: center;
-    margin-top: 4px;
+    float: right;
+
 }
 
 .row{
@@ -106,8 +175,11 @@ hr{
     top: -10px;
 }
 
+/*-------------------------------------------------------------------------------------*/
 
-
+.wrapperClicked{
+    background-color: #4e7492;
+}
 
 
 
