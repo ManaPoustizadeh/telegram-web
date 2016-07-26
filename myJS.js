@@ -9,7 +9,7 @@
 // document.getElementsByClassName("menuWrapper")[1].onclick = function () {
 //     this.style.background = "#4e7492";
 // };
-
+var flag = false;
 
 $('#searchButton').mousedown(function () {
     $(this).css({"background": "#4e7492"});
@@ -24,16 +24,22 @@ $('#searchButton').click(function () {
 
 $('#searchBar').blur(function () {
     $('#searchBar').val('');
+    $('#cross').hide();
     $('#searchBar').hide();
 });
 
 
+$('#searchBar').keydown(function () {
+    if($('#searchBar').val() != "" && !flag){
+        $('#cross').show();
+        flag = true;
+    }
+    if($('#searchBar').val()== ""){
+        flag = false;
+        $('#cross').hide();
+    }
+});
 
-if($('#searchBar').val()!= ""){
-    alert("hello");
-}
-
-// 
 
 $('#searchButton').mouseup(function () {
     $(this).css({"background-color": "#5681a2"});
