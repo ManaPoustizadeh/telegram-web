@@ -223,6 +223,81 @@ hr{
 
 
 
+/*--------------------------------------------chatBoard-----------------------------------------*/
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+#chatBoard{
+    position: absolute;
+    list-style-type: none;
+    /*margin-top: 54px;*/
+    /*margin-bottom: 44px;*/
+    height: 75%;
+    /*bottom: 60px;*/
+    top: 44px;
+    overflow-y: auto;
+}
+
+
+#chatBoard li{
+    margin: 20px 5px 20px 5px;
+    display: block;
+    /*min-width: 100%;*/
+}
+
+#chatBoard div {
+    min-width: 100%;
+    width: 100%;
+}
+
+#chatBoard .message{
+    background: #efefef;
+    border-radius: 3px;
+    /*margin-top : 10px;*/
+    margin-bottom: 5px;
+    /*box-sizing: content-box;*/
+    padding: 8px;
+    /*width: %;*/
+    max-width: 80%;
+    display: inline-block;
+
+
+}
+
+
+
+ .receiver {
+    float: right;
+    margin-left: 10%;
+    position: relative;
+
+     display: table-cell;
+
+ }
+
+.receiver p{
+    float: right;
+}
+
+.sender {
+    position: relative;
+    margin-right: 10%;
+    float: left;
+}
+
+.sender > .time {
+    position: absolute;
+    margin-left: 10px;
+    bottom: 10%;
+    }
+
+.receiver > .time {
+    position: ;
+}
+
 
 
 
