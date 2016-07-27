@@ -121,16 +121,22 @@ html, body{
 #menu{
     float: right;
     position: absolute;
+    border-radius: 0px;
+    outline: solid 1px #f2f2f2;
     left: 70%;
     top: 0%;
-    padding: 5px;
+    padding: 0px;
     z-index: 3;
     font-size: 14px;
     min-width: 215px;
 }
 
 #menu li{
-    padding: 10px;
+    padding: 15px;
+}
+
+.dropdown-menu li:hover{
+    background: #f2f2f2;
 }
 
 ul{
