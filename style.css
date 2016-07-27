@@ -95,6 +95,7 @@ html, body{
     outline: none;
     border-radius: 3px;
     display: none;
+    z-index: 0;
 
 }
 
@@ -105,6 +106,14 @@ html, body{
     margin-top: -31px;
     width: 34px;
     height: 34px;
+}
+
+#menu{
+    float: right;
+    position: absolute;
+    left:auto;
+    padding: 5px;
+    z-index: 0;
 }
 
 ul{
