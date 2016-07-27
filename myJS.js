@@ -13,7 +13,7 @@ var flag = false;
 
 $('#searchButton').mousedown(function () {
     $(this).css({"background": "#4e7492"});
-    $('#searchBar').show();
+    $('.wrapperSearch').show();
     $('#menuButton').attr('class' , 'menuWrapper');
 });
 
@@ -25,7 +25,7 @@ $('#searchButton').click(function () {
 $('#searchBar').blur(function () {
     $('#searchBar').val('');
     $('#cross').hide();
-    $('#searchBar').hide();
+    $('.wrapperSearch').hide();
 });
 
 
@@ -36,7 +36,7 @@ $('#searchBar').keydown(function () {
     }
     if($('#searchBar').val()== ""){
         flag = false;
-        $('#cross').hide();
+        //$('#cross').hide();
     }
 });
 
@@ -48,4 +48,10 @@ $('#searchButton').mouseup(function () {
 
 $('#menuButton').click(function () {
     $(this).toggleClass("wrapperClicked");
+});
+
+
+$("#cross").click(function(){
+   $("#searchBar").val("");
+   $(this).hide();
 });

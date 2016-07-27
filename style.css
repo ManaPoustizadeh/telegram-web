@@ -89,22 +89,32 @@ html, body{
     background-position-x: 5px;
     background-position-y: 50%;
     min-width: 100%;
-    padding: 5px 25px 5px 25px;
+    padding: 5px 20px 5px 25px;
     margin-top: 5px;
     margin-bottom: 5px;
     outline: none;
     border-radius: 3px;
-    display: none;
-
+    /*display: none;*/
+    z-index: -1;
 }
 
 #cross{
-    display: none;
+    /*display: none;*/
+    position: relative;
     z-index: 1000;
     float: right;
-    margin-top: -31px;
-    width: 34px;
-    height: 34px;
+    left: -10px;
+    margin-top: -26px;
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+    background: url("img/cross.png") no-repeat;
+    background-size: 13px 13px;
+}
+
+.wrapperSearch{
+    /*position: absolute;*/
+    display: none;
 }
 
 ul{
@@ -185,6 +195,7 @@ hr{
 .wrapperClicked{
     background-color: #4e7492;
 }
+
 
 
 
