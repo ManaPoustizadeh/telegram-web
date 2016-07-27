@@ -256,15 +256,10 @@ html, body{
 #chatBoard .message{
     background: #efefef;
     border-radius: 3px;
-    /*margin-top : 10px;*/
     margin-bottom: 5px;
-    /*box-sizing: content-box;*/
     padding: 8px;
-    /*width: %;*/
     max-width: 80%;
     display: inline-block;
-
-
 }
 
 
@@ -275,6 +270,8 @@ html, body{
     position: relative;
 
      display: table-cell;
+     align-content: right;
+     text-align: right;
 
  }
 
@@ -291,11 +288,14 @@ html, body{
 .sender > .time {
     position: absolute;
     margin-left: 10px;
-    bottom: 10%;
+    bottom: 12px;
     }
 
 .receiver > .time {
-    position: ;
+    position: absolute;
+    margin-left: -80px;
+    bottom: 12px;
+    display: inline-block;
 }
 
 
