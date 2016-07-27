@@ -46,8 +46,15 @@ $('#searchButton').mouseup(function () {
     // $('#menuButton').attr('class' , 'menuWrapper');
 });
 
+$('#cross').click(function () {
+    // $('#searchBar').val('');
+    alert("jhg");
+})
+
 $('#menuButton').click(function () {
     $(this).toggleClass("wrapperClicked");
+    $('#menu').toggle();
+
 });
 
 
@@ -55,3 +62,5 @@ $("#cross").click(function(){
    $("#searchBar").val("");
    $(this).hide();
 });
+
+
