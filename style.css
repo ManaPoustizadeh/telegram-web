@@ -8,20 +8,23 @@ html, body{
     padding: 0;
 }
 
-#main{
+#main , #mainChatPage{
     min-height:100%;
     height:100%;
     margin: 0 auto;
+    position: relative;
     /*max-width: 1010px;*/
 }
 
-.navbar , .nav{
+
+#navbarChatpage{
     margin-bottom: 0px;
     border: none;
     background-color: #5681a2;
-    min-height:44px;
+    max-height: 30%;
     min-width:100%;
-    position: fixed;
+    position: absolute;
+
 }
 
 #topMenu{
@@ -233,11 +236,9 @@ html, body{
 #chatBoard{
     position: absolute;
     list-style-type: none;
-    /*margin-top: 54px;*/
-    /*margin-bottom: 44px;*/
-    height: 75%;
-    /*bottom: 60px;*/
-    top: 44px;
+    width: 100%;
+    top : 44px;
+    bottom: 55px;
     overflow-y: auto;
 }
 
@@ -260,6 +261,7 @@ html, body{
     padding: 8px;
     max-width: 80%;
     display: inline-block;
+    overflow-wrap: break-word;
 }
 
 
@@ -297,6 +299,58 @@ html, body{
     bottom: 12px;
     display: inline-block;
 }
+
+.emoji {
+    background: url('img/smiley.png') no-repeat;
+    background-size: 28px 27px ;
+    height: 27px;
+    width: 28px;
+    margin-top: 12px;
+    margin-left: 20px;
+    margin-right: 0;
+    /*position: absolute;*/
+}
+
+.bottomWrapper {
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+}
+
+input[name="typingBox"] {
+    margin-top: 8px;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    padding: 8px;
+    border: solid 2px #efefef;
+    outline: none;
+    border-radius: 3px;
+}
+
+.typeBox{
+    background: #efefef;
+    transition: 0.5s ease;
+    min-width: 20px;
+}
+
+.selected {
+    background: transparent;
+    transition: 0.5s ease;
+}
+
+.attach {
+    background: url('img/attach.png') no-repeat;
+    background-size: 23px 26px ;
+    height: 26px;
+    width: 23px;
+    margin-top: 12px;
+    margin-left: 28px;
+    float: right;
+    /*margin-right: 0;*/
+    /*position: absolute;*/
+}
+
 
 
 
