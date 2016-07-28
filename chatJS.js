@@ -10,23 +10,62 @@ $('.typeBox').click(function(){
 
 .blur(function(){
   $(this).toggleClass('selected');
-});
+})
 
+.keypress(function(){
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if(keycode == '13'){
+            if($(this).val()!=''){
+                var $li = $("<li>");
+                var $div = $("<div>" , {"class" : "sender"});
+                var $p = $("<p>" , {"class" : "message sent"});
+                $p.html($(this).val());
+                var $span = $("<span>" , {"class" : "time"});
+                var d = new Date();
+                $span.html(d.toLocaleTimeString().replace(/:\d+ /, ' '));
+                $div.append($p);
+                $div.append($span);
+                $li.append($div);
+                $('#messageArray').append($li);
+                $(this).val('');
+
+                $('#chatBoard').scrollTop($('#chatBoard')[0].scrollHeight);
+            }
+        }
+
+    });
 
 
 $(window).resize(function(){
-    if(screen.width/window.innerWidth > 2.1){
-       if(screen.width/window.innerWidth > 2.6){
-           $('.typeBox').removeClass("col-xs-10");
-           $('.typeBox').addClass("col-xs-4");
-       }
-        $('.typeBox').removeClass("col-xs-10");
-        $('.typeBox').addClass("col-xs-4");
-
-    } else {
-        $('.typeBox').removeClass("col-xs-4");
-        $('.typeBox').addClass("col-xs-10");
+    console.log(screen.width/window.innerWidth);
+    if(screen.width/window.innerWidth>=5){
+        $('#goozbaba').removeClass("col-xs-6");
+        $('#goozbaba').addClass("col-xs-5");
     }
+    else if(screen.width/window.innerWidth>=4){
+        $('#goozbaba').removeClass("col-xs-7");
+        $('#goozbaba').removeClass("col-xs-5");
+        $('#goozbaba').addClass("col-xs-6");
+    }
+    else if(screen.width/window.innerWidth>=3){
+        $('#goozbaba').removeClass("col-xs-8");
+        $('#goozbaba').removeClass("col-xs-6");
+        $('#goozbaba').addClass("col-xs-7");
+    }
+    else if(screen.width/window.innerWidth>=2.5){
+        $('#goozbaba').removeClass("col-xs-10");
+        $('#goozbaba').removeClass("col-xs-7");
+        $('#goozbaba').addClass("col-xs-9");
+    }
+    else{
+        $('#goozbaba').removeClass("col-xs-9");
+        $('#goozbaba').addClass("col-xs-10");
+    }
+        //$('#goozbaba').removeClass("col-xs-10");
+        //$('#goozbaba').addClass("col-xs-6");
+        //$('#goozbaba').removeClass("col-xs-6");
+        //$('#goozbaba').addClass("col-xs-10");
+
 });
 
 var mediaFlag = false;

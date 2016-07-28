@@ -438,7 +438,8 @@ input[name="typingBox"] {
     height: 26px;
     width: 23px;
     margin-top: 12px;
-    margin-left: 28px;
+    /*margin-left: 28px;*/
+    right : 15px;
     float: right;
     /*margin-right: 0;*/
     /*position: absolute;*/
