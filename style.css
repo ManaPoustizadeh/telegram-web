@@ -221,6 +221,99 @@ hr{
     background-color: #4e7492;
 }
 
+/*----------------------------------------chat page-----------------------------------*/
+
+.leftSide{
+    min-width: 150px;
+    float: left;
+    position: relative;
+    left: -15px;
+    padding-left: 15px;
+    height: 100%;
+}
+
+.leftSide:hover{
+    background-color: #4e7492;
+}
+
+.leftSide:hover .lastSeen{
+    color: white;
+}
+
+#back{
+    width: 11px;
+    height: 19px;
+    margin-top: 12px;
+    margin-left: -4px;
+    margin-right: 2px;
+    opacity: 0.8;
+}
+
+.username{
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+}
+
+.lastSeen{
+    display: block;
+    position: relative;
+    font-size: 12px;
+    left: 14px;
+    top: -8px;
+    max-width: 100%;
+    color: #b8cee1;
+}
+
+#mediaIcon{
+    float: right;
+    padding: 6px 14px 7px 14px;
+}
+
+.icon-bar{
+    background-color: #d7e5f0;
+    width: 5px;
+    height: 5px;
+    border-radius: 3px;
+    margin: 4px 6px;
+    display: block;
+}
+
+#media{
+    position: absolute;
+    border-radius: 0px;
+    outline: solid 1px #f2f2f2;
+    left: 65%;
+    top: 50px;
+    padding: 0px;
+    z-index: 3;
+    font-size: 14px;
+    min-width: 200px;
+    color: #000;
+}
+
+#media li{
+    padding: 15px;
+}
+
+#editMessages{
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.chatPic{
+    min-width: 33px;
+    min-height: 33px;
+    float: right;
+    padding: 5px 5px 6px 5px;
+}
+
+#image2{
+    width: 33px;
+    height: 33px;
+}
+
+
+
 
 
 
