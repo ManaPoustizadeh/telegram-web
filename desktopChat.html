@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telegram</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid" id="main">
+        <div class="navbar navbar-static-top" id="navbarChatpage">
+            <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" id="topMenu">
+                <span class="desktopMenuButton">
+                    <span class="dropdown-toggle menuIconD">
+                    <div class="icon-bar menuLine"></div>
+                    <div class="icon-bar menuLine"></div>
+                    <div class="icon-bar menuLine"></div>
+                </span>
+                <span id="telegram">Telegram</span>
+                </span>
+            </div>
+        </div>
+
+        <div class="chats">
+            <div class="leftSide">
+                <div class="wrapperSearchD">
+                    <input type="search" placeholder="Search" id="searchBarD" autofocus="true">
+                <span id="cross">
+                </span>
+                </div>
+                <ul id="chatListsD">
+                    <li class="rowList">
+                        <div id="picAndName">
+                            <span>
+                                <img src="img/mohammad.jpg" class="profPic" id="image1" width="40px" height="40px"/>
+                            </span>
+                            <span class="chatNameD">Mohammad</span>
+                            <span class="chatSumD" style="display: block;">love you :P</span>
+                        </div>
+                        <div>
+                            <h6 class="timeD">5:20</h6>
+                            <!--<div class="notifCircle">5</div>-->
+                        </div>
+                    </li>
+
+                    <li class="rowList">
+                        <div id="picAndName">
+                            <span>
+                                <img src="img/uncox.jpg" class="profPic" id="image1" width="40px" height="40px"/>
+                            </span>
+                            <span class="chatNameD">uncox</span>
+                            <span class="chatSumD" style="display: block;">Photo</span>
+                        </div>
+                        <div>
+                            <h6 class="timeD">12:40</h6>
+                            <br>
+                            <div class="notifCircleD">2</div>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <div class="conversations">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="chatJS.js"></script>
+</html>
