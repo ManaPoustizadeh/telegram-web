@@ -459,10 +459,22 @@ input[name="typingBox"] {
 }
 
 .chats{
-    position: absolute;
+    position: relative;
     top: 50px;
     padding-left: 10px;
+    min-width: 100%;
+    min-height: 100%;
     float: left;
+}
+
+.leftSideD{
+    min-width: 300px;
+    min-height: 100%;
+    float: left;
+    position: absolute;
+    left: -10px;
+    padding-left: 15px;
+    border-right: 1px solid #e7e9eb;
 }
 
 #searchBarD{
