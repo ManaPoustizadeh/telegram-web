@@ -36,7 +36,7 @@ $('#searchBar').keydown(function () {
     }
     if($('#searchBar').val()== ""){
         flag = false;
-        //$('#cross').hide();
+        $('#cross').hide();
     }
 });
 
@@ -51,9 +51,17 @@ $('#cross').click(function () {
     alert("jhg");
 })
 
+
+
+
+var personArray = new Array();
+var tmpPerson;
+
+
 $('#menuButton').click(function () {
     $(this).toggleClass("wrapperClicked");
     $('#menu').toggle();
+
 
 });
 
@@ -64,3 +72,69 @@ $("#cross").click(function(){
 });
 
 
+$.get("listItemTemplate.html" , function(myVar){
+    var $elem = $('<li></li>').html(myVar);
+    var $img = $elem.find('img');
+    $img.attr("src","img/mohammad.jpg");
+    //alert($img.attr("src"));
+    $('#chatLists').append($elem);
+
+});
+
+$(document).ready(function(){
+
+
+
+
+
+    $.getJSON("data").then(function(data){
+        //assignshit(data);
+        personArray = data;
+
+        testtest(data);
+
+    });
+
+
+});
+
+
+function testtest(tmptmp){
+
+
+    for(var i=0; i < tmptmp.length ;i++){
+        console.log("hello");
+        tesst(tmptmp[i] , i);
+    }
+}
+
+
+function tesst(tmo, i){
+    $.get("listItemTemplate.html" , function(myVar){
+
+
+        console.log(tmo.chatSum + "i: "  + i);
+
+        var $elem = $('<li></li>').html(myVar);
+        //console.log(personArray[i].profilePicture);
+        var $img = $elem.find('img');
+        $img.attr("src",tmo.phot);
+        $img.attr("id", "image" + i);
+        var $title = $elem.find(".chatName");
+        $title.text(tmo.chatTitle);
+        var $sum = $elem.find(".chatSum");
+        $sum.text(tmo.chatSum);
+        var $time = $elem.find(".time");
+        $time.text(tmo.time);
+
+        if(tmo.unread != ""){
+            var $div = $("<div></div>");
+            $div.attr("class","notifCircle");
+            $div.text(tmo.unread);
+            var $timeNread = $elem.find(".timeNread");
+            $timeNread.append($div);
+        }
+        $('#chatLists').append($elem);
+    });
+
+}
