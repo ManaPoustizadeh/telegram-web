@@ -464,11 +464,12 @@ input[name="typingBox"] {
     padding-left: 10px;
     min-width: 100%;
     min-height: 100%;
-    float: left;
+    /*float: left;*/
+    margin: auto;
 }
 
 .leftSideD{
-    min-width: 300px;
+    min-width: 20%;
     min-height: 100%;
     float: left;
     position: absolute;
@@ -509,10 +510,10 @@ input[name="typingBox"] {
     margin-left: -12px;
     padding-left: 15px;
     padding-right: 10px;
-    min-width: 280px;
+    min-width: 18%;
     min-height: 60px;
     height: 60px;
-    width: 270px;
+    width: 18%;
 }
 .chatNameD{
     position: relative;
@@ -551,6 +552,46 @@ input[name="typingBox"] {
     top: -45px;
     left: 30px;
 }
+
+.conversations{
+    position: absolute;
+    list-style-type: none;
+    width: 80%;
+    /*right: 20px;*/
+    left: 30%;
+    /*margin-left: 320px;*/
+    top : 44px;
+    bottom: 55px;
+    float: left;
+    overflow-y: auto;
+}
+
+#messageArrayD{
+    width: 100%;
+    min-width: 100%;
+}
+
+.conversations li{
+    margin: 20px 5px 20px 5px;
+    display: block;
+    /*min-width: 100%;*/
+}
+
+.conversations div {
+    min-width: 100%;
+    width: 100%;
+}
+
+.conversations .message{
+    /*background: #efefef;*/
+    border-radius: 3px;
+    margin-bottom: 5px;
+    padding: 8px;
+    max-width: 80%;
+    display: inline-block;
+    overflow-wrap: break-word;
+}
+
 
 
 
